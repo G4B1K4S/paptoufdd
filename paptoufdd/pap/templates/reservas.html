@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<title>Reservas</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="header">
+    <div class="header-top">
+        <h2>Reservas</h2>
+        <img src="{{ url_for('static', filename='logo2.png') }}" class="logo">
+    </div>
+    <p>As suas reservas</p>
+</div>
+
+<div class="container">
+
+<h2>As tuas reservas</h2>
+
+{% for r in reservas %}
+
+<div class="produto">
+
+<img src="{{ r.imagem }}">
+
+<h3>{{ r.nome }}</h3>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+<div class="navbar">
+
+    <a href="/">
+        <img src="{{ url_for('static', filename='fig_abas/home1.png') }}">
+        <span>Home</span>
+    </a>
+
+    <a href="/favoritos">
+        <img src="{{ url_for('static', filename='fig_abas/coração1.png') }}">
+        <span>Favoritos</span>
+    </a>
+
+    <a href="/reservas" class="active">
+        <img src="{{ url_for('static', filename='fig_abas/reservas1.png') }}">
+        <span>Reservas</span>
+    </a>
+
+    <a href="/alertas">
+        <img src="{{ url_for('static', filename='fig_abas/sino.png') }}">
+        <span>Notificações</span>
+    </a>
+
+</div>
+
+</body>
+</html>

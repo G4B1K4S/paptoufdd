@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<title>Notificações</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="header">
+    <div class="header-top">
+        <h2>Notificações</h2>
+        <img src="{{ url_for('static', filename='logo2.png') }}" class="logo">
+    </div>
+    <p>                   </p>
+</div>
+
+<div class="container">
+
+<p>Ainda não tens notificações.</p>
+
+</div>
+
+<div class="navbar">
+
+    <a href="/">
+        <img src="{{ url_for('static', filename='fig_abas/home1.png') }}">
+        <span>Home</span>
+    </a>
+
+    <a href="/favoritos">
+        <img src="{{ url_for('static', filename='fig_abas/coração1.png') }}">
+        <span>Favoritos</span>
+    </a>
+
+    <a href="/reservas">
+        <img src="{{ url_for('static', filename='fig_abas/reservas1.png') }}">
+        <span>Reservas</span>
+    </a>
+
+    <a href="/alertas" class="active">
+        <img src="{{ url_for('static', filename='fig_abas/sino.png') }}">
+        <span>Notificações</span>
+    </a>
+
+</div>
+
+</body>
+</html>

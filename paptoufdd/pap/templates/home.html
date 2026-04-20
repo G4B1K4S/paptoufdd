@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Migalhas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="header">
+    <div class="header-top">
+        <h2>Migalhas</h2>
+        <img src="{{ url_for('static', filename='logo2.png') }}" class="logo">
+    </div>
+
+<a href="/logout" class="logout-btn">Sair</a>
+
+</div>
+
+
+<div class="container">
+
+    {% if erro %}
+        <div class="mensagem-erro">
+            ⚠️ {{ erro }}
+        </div>
+    {% endif %}
+
+    <div class="section-title">
+        Disponíveis Agora
+    </div>
+
+    <!-- PRODUTO 1 -->
+    <div class="produto">
+
+        <div class="card-content">
+            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff">
+            <div class="store-name">Padaria Central • 0.8 km</div>
+            <h3>Caixa Surpresa do Dia</h3>
+            <p>Mix variado de pães e doces frescos</p>
+
+            <div class="price">
+                <span class="new">€4.99</span>
+                <span class="old">€12.00</span>
+            </div>
+    <form action="/reservar" method="POST">
+
+    <input type="hidden" name="produto_id" value="1">
+
+    <button type="submit" class="reservar-btn">
+    Reservar
+    </button>
+
+    </form>
+
+        <form action="/favorito" method="POST">
+
+        <input type="hidden" name="produto_id" value="1">
+
+            <button type="submit" class="fav-btn">
+            Adicionar aos favoritos
+            </button>
+
+        </form>
+
+    </div>
+
+    <!-- PRODUTO 2 -->
+        <div class="card-content">
+            <div class="card-content">
+            <img src="https://curtamais.com.br/brasilia/wp-content/uploads/sites/3/2017/03/4fccc8ca30a27bccce6af4a4119c8cb4-1024x640.jpg">
+            <div class="store-name">Pastelaria Doce Vida • 1.2 km</div>
+            <h3>Box de Pastéis</h3>
+            <p>Seleção de pastéis e bolos do dia</p>
+
+            <div class="price">
+                <span class="new">€3.99</span>
+                <span class="old">€10.00</span>
+            </div>
+    <form action="/reservar" method="POST">
+
+    <input type="hidden" name="produto_id" value="2">
+
+    <button type="submit" class="reservar-btn">
+    Reservar
+    </button>
+
+    </form>
+
+    <form action="/favorito" method="POST">
+
+    <input type="hidden" name="produto_id" value="2">
+
+    <button type="submit" class="fav-btn">
+    Adicionar aos favoritos
+    </button>
+
+    </form>
+
+    </div>
+
+    </div>
+    <!-- PRODUTO 3 -->
+        <div class="card-content">
+            <div class="card-content">
+            <img src="https://staticcookist.akamaized.net/wp-content/uploads/sites/22/2020/06/Croissant23.jpg?im=Resize,width=570;">
+            <div class="store-name">Padaria Lisboa • 0.5 km</div>
+            <h3>Pack de Croissants</h3>
+            <p>Croissants simples e recheados</p>
+
+            <div class="price">
+                <span class="new">€2.99</span>
+                <span class="old">€8.50</span>
+            </div>
+    <form action="/reservar" method="POST">
+
+    <input type="hidden" name="produto_id" value="3">
+
+    <button type="submit" class="reservar-btn">
+    Reservar
+    </button>
+
+    </form>
+
+    <form action="/favorito" method="POST">
+
+    <input type="hidden" name="produto_id" value="3">
+
+    <button type="submit" class="fav-btn">
+    Adicionar aos favoritos
+    </button>
+
+    </form>
+
+    </div>
+
+</div>
+
+    <!-- PRODUTO 4 -->
+        <div class="card-content">
+            <div class="card-content">
+                <img src="https://i.pinimg.com/736x/8d/c9/2c/8dc92cb997893a0cc30bf72b2e5ab91d--portuguese.jpg">
+            <div class="store-name">Café da Praça • 0.9 km</div>
+            <h3>Snack Box</h3>
+            <p>Salgados e sandes do dia</p>
+
+            <div class="price">
+                <span class="new">€4.50</span>
+                <span class="old">€11.00</span>
+            </div>
+    <form action="/reservar" method="POST">
+
+    <input type="hidden" name="produto_id" value="4">
+
+    <button type="submit" class="reservar-btn">
+    Reservar
+    </button>
+
+    </form>
+
+    <form action="/favorito" method="POST">
+
+    <input type="hidden" name="produto_id" value="4">
+
+    <button type="submit" class="fav-btn">
+    Adicionar aos favoritos
+    </button>
+
+    </form>
+
+    </div>
+
+</div>
+    <!-- PRODUTO 5 -->
+        <div class="card-content">
+            <div class="card-content">
+                <img src="https://www.discoverwalks.com/blog/wp-content/uploads/2018/06/top10portuguesedishesyoushouldtry5-1024x649.jpg">
+            <div class="store-name">Tasca da beirada • 1.5 km</div>
+            <h3>Prato de sardinhas</h3>
+            <p>Sardinhas, batatas e legumes</p>
+
+            <div class="price">
+                <span class="new">€3.50</span>
+                <span class="old">€9.00</span>
+            </div>
+    <form action="/reservar" method="POST">
+
+    <input type="hidden" name="produto_id" value="5">
+
+    <button type="submit" class="reservar-btn">
+    Reservar
+    </button>
+
+    </form>
+
+    <form action="/favorito" method="POST">
+
+    <input type="hidden" name="produto_id" value="5">
+
+    <button type="submit" class="fav-btn">
+    Adicionar aos favoritos
+    </button>
+
+    </form>
+
+    </div>
+
+</div>
+
+    <!-- PRODUTO 6 -->
+
+        <div class="card-content">
+            <div class="card-content">
+                <img src="https://hortasaudavel.com.br/wp-content/uploads/2023/05/cesta-frutas-1.jpg">
+            <div class="store-name">Padaria do Bairro • 0.7 km</div>
+            <h3>Caixa de frutas</h3>
+            <p>Seleção variada de frutas</p>
+
+            <div class="price">
+                <span class="new">€3.99</span>
+                <span class="old">€10.50</span>
+            </div>
+    <form action="/reservar" method="POST">
+
+    <input type="hidden" name="produto_id" value="6">
+
+    <button type="submit" class="reservar-btn">
+    Reservar
+    </button>
+
+    </form>
+
+    <form action="/favorito" method="POST">
+
+    <input type="hidden" name="produto_id" value="6">
+
+    <button type="submit" class="fav-btn">
+    Adicionar aos favoritos
+    </button>
+
+    </form>
+
+    </div>
+</div>
+
+<div class="navbar">
+
+    <a href="/" class="active">
+        <img src="{{ url_for('static', filename='fig_abas/home1.png') }}">
+        <span>Home</span>
+    </a>
+
+    <a href="/favoritos">
+        <img src="{{ url_for('static', filename='fig_abas/coração1.png') }}">
+        <span>Favoritos</span>
+    </a>
+
+    <a href="/reservas">
+        <img src="{{ url_for('static', filename='fig_abas/reservas1.png') }}">
+        <span>Reservas</span>
+    </a>
+
+    <a href="/alertas">
+        <img src="{{ url_for('static', filename='fig_abas/sino.png') }}">
+        <span>Notificações</span>
+    </a>
+
+</div>
+
+</body>
+</html>
